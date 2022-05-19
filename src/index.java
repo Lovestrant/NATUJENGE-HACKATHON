@@ -41,5 +41,19 @@ public class index {
 
         int Unsigned = bytes[8]&0xff;
         System.out.println("Unsigned Type 0: " +Unsigned);
+
+        //B flag
+        boolean Bflag = ((bytes[9]&0xff) &0b00010000) >0;
+        System.out.println("BFlag " +Bflag);
+
+        //Length
+
+        int totalLength = 0; //0x00000000
+        int totalLength1 = totalLength | (bytes[10]&0xff) << 8;
+        int totalLengthFinal = totalLength1 | (bytes[11]&0xff);
+
+        System.out.println("totalLengthFinal " +totalLengthFinal);
+
+        //
     }
 }
