@@ -19,5 +19,15 @@ public class index {
         System.out.println("SourcePort: " +SourcePort);
 
 
+        ///Destination port
+
+        int part3 = bytes[2]&0xff; // 0001 0011 & 1011 0110
+        int part4 = bytes[3]&0xff;
+
+        String DestinationPort = part3+""+part4;
+        System.out.println("DestinationPort: " +DestinationPort);
+
+        //Verification tag
+
     }
 }
