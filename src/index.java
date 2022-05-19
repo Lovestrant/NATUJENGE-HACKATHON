@@ -36,5 +36,10 @@ public class index {
 
         String Verificationtag = part7+""+part5+ part6+""+part8;
         System.out.println("Verification tag: " +Verificationtag);
+
+        //Unsigned Type 0
+
+        int Unsigned = bytes[8]&0xff;
+        System.out.println("Unsigned Type 0: " +Unsigned);
     }
 }
