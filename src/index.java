@@ -29,5 +29,12 @@ public class index {
 
         //Verification tag
 
+        int part7 = bytes[4]&0xff; // 0001 0011 & 1011 0110
+        int part5 = bytes[5]&0xff;
+        int part6 = bytes[6]&0xff;
+        int part8 = bytes[7]&0xff;
+
+        String Verificationtag = part7+""+part5+ part6+""+part8;
+        System.out.println("Verification tag: " +Verificationtag);
     }
 }
